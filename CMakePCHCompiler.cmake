@@ -282,7 +282,7 @@ function(__watch_pch_last_hook variable access value)
 			get_target_property(value "${target}" CXX_STANDARD)
 			if(value)
 				target_compile_options("${pch_target}" PRIVATE
-					-std=gnu++${value}
+					-std=c++${value}
 					)
 			endif()
 			# NOTE: setting POSITION_INDEPENDENT_CODE here has no effect
